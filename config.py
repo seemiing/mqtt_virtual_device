@@ -1,0 +1,7 @@
+HOST = "192.168.0.102"
+PORT = 1883
+USERNAME = "tonytony"
+PASSWORD = "tony"
+
+SENSOR_INTERVAL_DELAY = 5
+
