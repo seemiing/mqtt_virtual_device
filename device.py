@@ -13,7 +13,6 @@ def on_connect(client, userdata, flags, reason_code, properties):
     client.subscribe("ac")
     client.subscribe("Tony")
 
-# The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
     message = msg.payload.decode("utf-8")
     topic = msg.topic
