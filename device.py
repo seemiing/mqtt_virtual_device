@@ -3,11 +3,8 @@ import time
 import threading
 import random
 from config import HOST, PORT, USERNAME, PASSWORD, SENSOR_INTERVAL_DELAY
-# The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, reason_code, properties):
     print(f"Connected with result code {reason_code}")
-    # Subscribing in on_connect() means that if we lose the connection and
-    # reconnect then subscriptions will be renewed.
     client.subscribe("lightpub")
     client.subscribe("fan")
     client.subscribe("ac")
